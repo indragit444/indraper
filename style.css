@@ -1,0 +1,213 @@
+/* style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4248ff;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+}
+
+/* Navbar */
+nav ul {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    color: #428eff;
+}
+
+/* Blog Section */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #4252ff;
+    margin-bottom: 20px;
+}
+
+.blog-card {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    margin: 15px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: top;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.blog-card:hover {
+    transform: scale(1.05);
+}
+
+.blog-card img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-card h3 {
+    margin: 15px;
+    color: #333;
+}
+
+.blog-card p {
+    margin: 15px;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.contact-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    color: #333;
+    font-size: 1.1em;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4252ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    text-align: center;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Galeri */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Gallery figure styling */
+.gallery figure {
+    margin: 10px;
+    text-align: center;
+}
+
+.gallery figcaption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.discount-icon {
+    position: fixed; /* Posisi tetap */
+    bottom: 20px; /* Jarak dari bawah */
+    left: 20px; /* Jarak dari kiri */
+    width: 60px; /* Lebar gambar */
+    cursor: pointer; /* Menunjukkan bahwa gambar dapat diklik */
+    transition: transform 0.2s; /* Efek transisi saat hover */
+}
+
+.discount-icon:hover {
+    transform: scale(1.1); /* Efek zoom saat mouse hover */
+}
+
+.popup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #4248ff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Agar pop-up di atas konten lainnya */
+}
+
+.popup button {
+    background-color: #4248ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.popup button:hover {
+    background-color: #333;
+}
+
+.discount-message {
+    position: fixed;
+    bottom: 80px; /* Jarak dari bawah agar tidak menutupi gambar */
+    left: 100px; /* Jarak dari kiri */
+    background-color: white;
+    border: 1px solid #4248ff;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 1s ease-in-out; /* Efek transisi untuk menghilang */
+    z-index: 1000; /* Agar pesan di atas konten lainnya */
+}

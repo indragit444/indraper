@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Perusahaan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Inmantpleks (fake)</h1>
+        <p>Selamat datang di blog kami</p>
+        <p>Menyajikan informasi terbaru dari perusahaan kami</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="tentangkami.html">Tentang Kami</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="blog" class="container">
+        <h2>Tempat ternyaman di Indonesia, Sabang-Merauke </h2>
+        <div class="blog-card" onclick="showAlert('Artikel 1')">
+            <img src="pohon.jpg" alt="Artikel 1">
+            <h3>Pemandangan bernuansa tropis-mixed style</h3>
+            <p>Pemandangan sesuai harapan.</p>
+        </div>
+        <div class="blog-card" onclick="showAlert('Artikel 2')">
+            <img src="bangun2.jpg" alt="Artikel 2">
+            <h3>Bangunan dengan bentuk unik</h3>
+            <p>Arsitektur penuh kreativitas</p>
+        </div>
+        <div class="blog-card" onclick="showAlert('Artikel 3')">
+            <img src="ruang2.jpeg" alt="Artikel 3">
+            <h3>Ruangan bertemakan modern</h3>
+            <p>Interior yang nyaman dan rapih</p>
+        </div>f
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Blog Perusahaan | Semua Hak Cipta Dilindungi</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<img src="diskon.png" alt="Diskon 10%" class="discount-icon" onclick="showDiscountMessage()">
+
+<div id="discount-message" class="discount-message" style="display: none;">
+    Diskon 10% untuk pembelian 100 rumah pertama!
+</div>
+
+<script>
+    function showAlert(articleTitle) {
+        alert("Anda membuka " + articleTitle);
+    }
+
+    function showDiscountMessage() {
+        const message = document.getElementById("discount-message");
+        message.style.display = "block"; // Tampilkan pesan
+
+        // Setelah 2 detik, mulai memudar
+        setTimeout(() => {
+            message.style.opacity = "0"; // Mulai memudar
+        }, 2000); // Tampilkan selama 2 detik
+
+        // Setelah 3 detik (total), sembunyikan pesan
+        setTimeout(() => {
+            message.style.display = "none"; // Sembunyikan pesan
+            message.style.opacity = "1"; // Reset opacity untuk tampilan berikutnya
+        }, 3000); // Sembunyikan setelah 3 detik
+    }
+</script>
+
+</body>
+</html>
